@@ -1,0 +1,13 @@
+<h1> {{dish.dish_name}}</h1>
+<p> {{dish.dish_description}}</p>
+
+<h3>Cena: {{dish.price}} zł</h3>
+<h3>Czas przygotowania: {{dish.make_time}} minut</h3>
+<br>
+<br>
+<p>Data dodania dania: {{dish.create_date}}</p>
+<p>Data aktualizacji dania: {{dish.update_date}}</p>
+<a href="{% url 'emenu:index' %}">Back to list of Menu Cards</a>
+
+
+

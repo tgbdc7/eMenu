@@ -1,0 +1,15 @@
+{% if dishes_list %}
+<h1>{{ view.title}}</h1>
+    <ul>
+    {% for dish in dishes_list %}
+        <li><a href="{% url 'emenu:dish' dish.id %}">{{ dish.dish_name }}</a></li>
+    {% endfor %}
+    </ul>
+
+
+{% else %}
+    <p>Card menu are NOT available or card menu hasn't anny dishes.</p>
+{% endif %}
+
+<a href="{% url 'emenu:index' %}">Back to list of Menu Cards</a>
+

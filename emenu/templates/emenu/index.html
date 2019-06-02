@@ -1,0 +1,12 @@
+{% if menu_cards_list %}
+    <ul>
+    {% for card in menu_cards_list %}
+        <li><a href="{% url 'emenu:detail_card' card.id %}">{{ card.card_name }}</a></li>
+    {% endfor %}
+    </ul>
+
+{% else %}
+    <p>No cards menu are available.</p>
+{% endif %}
+
+<a href="/admin/">Go to admin</a>
